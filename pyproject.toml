@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "link_to_pdf"
+version = "0.1.0"
+description = "Converting internet page by URL into pdf file"
+authors = ["Teddy Coder <fedor_coder@mail.ru>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2.27.1"
+beautifulsoup4 = "^4.11.1"
+pdfme = "^0.4.11"
+
+[tool.poetry.dev-dependencies]
+flake8 = "^4.0.1"
+black = "^22.3.0"
+mypy = "^0.950"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
