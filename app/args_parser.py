@@ -9,4 +9,6 @@ def parse_args():
         '-o', '--output', nargs=1, required=False, default='output.pdf')
 
     args = arg_parser.parse_args()
-    return args.url[0], args.output[0] if isinstance(args.output, list) else args.output
+    return args.url[0], args.output[0] \
+        if isinstance(args.output, list) \
+        else args.output

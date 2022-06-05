@@ -1,3 +1,5 @@
+from bs4 import BeautifulSoup
+
 from app.common.validator import Validator
 from app.base.parser import BaseParser
 from app.pikabu.parser import PikabuParser
@@ -13,7 +15,7 @@ class Registry:
         return Validator(list(self._REGISTRY.keys()))
 
     def get_parser(self, site_name: str) -> BaseParser:
-        return self._REGISTRY[site_name]['parser_class']
+        return self._REGISTRY[site_name]['parser_class'](BeautifulSoup)
 
 
 registry = Registry()
